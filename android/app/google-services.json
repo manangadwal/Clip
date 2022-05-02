@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "521609547042",
+    "project_id": "psychic-raceway-347405",
+    "storage_bucket": "psychic-raceway-347405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521609547042:android:abb062e97b1241b6ebe97b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521609547042-v8plti11ubdp1qdun9gmrv54eg3u0e3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbHuSl_Zd2uwe4j1qqN8lJvw-OKq6SOvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521609547042-v8plti11ubdp1qdun9gmrv54eg3u0e3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
