@@ -272,10 +272,14 @@ class _AddTabState extends State<AddTab> {
             ? uploaded
                 ? Icon(
                     Icons.check_circle,
+                    size: 30,
                     color: Colors.green,
                   )
                 : CircularProgressIndicator()
             : Container(),
+        SizedBox(
+          height: 20,
+        )
       ],
     );
   }

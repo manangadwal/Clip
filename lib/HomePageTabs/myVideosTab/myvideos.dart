@@ -1,17 +1,28 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/HomePageTabs/HomeTab/video.dart';
 
-class HomeTab extends StatefulWidget {
-  const HomeTab({Key? key}) : super(key: key);
+class MyVideos extends StatefulWidget {
+  String? uid;
 
   @override
-  State<HomeTab> createState() => _HomeTabState();
+  State<MyVideos> createState() => _MyVideosState();
 }
 
-class _HomeTabState extends State<HomeTab> {
+class _MyVideosState extends State<MyVideos> {
   Stream<QuerySnapshot> getData() {
-    return FirebaseFirestore.instance.collection("videos").snapshots();
+    return FirebaseFirestore.instance
+        .collection("users")
+        .doc(widget.uid)
+        .collection("videos")
+        .snapshots();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    widget.uid = FirebaseAuth.instance.currentUser?.uid;
   }
 
   @override
@@ -30,8 +41,7 @@ class _HomeTabState extends State<HomeTab> {
                     children: snapshot.data?.docs.map((document) {
                           return Column(
                             children: [
-                              Text(document['title'],
-                                  style: TextStyle(fontSize: 24)),
+                              Text(document['title']),
                               Text(document['desc']),
                               Container(
                                 color: Colors.white.withOpacity(0.4),

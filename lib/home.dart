@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/HomePageTabs/AddTab/addTab.dart';
 import 'package:flutter_application_3/HomePageTabs/HomeTab/hometab.dart';
+import 'package:flutter_application_3/HomePageTabs/myVideosTab/myvideos.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -20,25 +21,17 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
+
+  
 
   List<Widget> _widgetOptions = <Widget>[
     HomeTab(),
     AddTab(),
-    Column(
-      children: [
-        Container(height: 200, width: 200, child: Image.asset('assets/8.jpg')),
-        Text(
-          'Bad Bitxh',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-          ),
-        ),
-      ],
-    ),
-  ];
+    MyVideos()
+    ];
 
   @override
   Widget build(BuildContext context) {
