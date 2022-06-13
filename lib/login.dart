@@ -37,6 +37,7 @@ class Login extends StatelessWidget {
                       color: HexColor('#F8BA1C'),
                       borderRadius: BorderRadius.circular(25)),
                   child: TextField(
+                    keyboardType: TextInputType.phone,
                     showCursor: false,
                     decoration: InputDecoration(
                         hintStyle: TextStyle(fontSize: 12),

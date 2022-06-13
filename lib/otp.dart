@@ -77,6 +77,13 @@ class _OtpState extends State<Otp> {
                 style: TextStyle(
                     color: HexColor('#F8BA1C'), fontWeight: FontWeight.bold),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              CircularProgressIndicator(
+                color: Colors.amber,
+                strokeWidth: 2,
+              ),
               Spacer(),
               Container(
                 width: MediaQuery.of(context).size.width,

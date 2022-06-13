@@ -29,17 +29,30 @@ class _HomeTabState extends State<HomeTab> {
                     shrinkWrap: true,
                     children: snapshot.data?.docs.map((document) {
                           return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(document['title'],
-                                  style: TextStyle(fontSize: 24)),
-                              Text(document['desc']),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Text(document['title'],
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                        fontSize: 24, color: Colors.white)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Text(document['desc'],
+                                    style: TextStyle(color: Colors.white)),
+                              ),
                               Container(
-                                color: Colors.white.withOpacity(0.4),
+                                color: Colors.black,
                                 height:
                                     MediaQuery.of(context).size.height - 100,
                                 width: MediaQuery.of(context).size.width,
                                 child: VideoScreen(document['url']),
                               ),
+                              SizedBox(
+                                height: 25,
+                              )
                             ],
                           );
                         }).toList() ??

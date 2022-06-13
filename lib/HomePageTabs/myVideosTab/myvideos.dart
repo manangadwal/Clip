@@ -41,15 +41,17 @@ class _MyVideosState extends State<MyVideos> {
                     children: snapshot.data?.docs.map((document) {
                           return Column(
                             children: [
-                              Text(document['title']),
-                              Text(document['desc']),
+                              // Text(document['title']),
+                              // Text(document['desc']),
                               Container(
                                 color: Colors.white.withOpacity(0.4),
-                                height:
-                                    MediaQuery.of(context).size.height - 100,
-                                width: MediaQuery.of(context).size.width,
+                                height: 70,
+                                width: 70,
                                 child: VideoScreen(document['url']),
                               ),
+                              SizedBox(
+                                height: 5,
+                              )
                             ],
                           );
                         }).toList() ??

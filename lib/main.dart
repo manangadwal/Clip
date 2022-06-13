@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(platform: TargetPlatform.iOS),
-      title: 'Flutter Demo',
+      title: 'Clip',
       home: userIs ? Home() : Login(),
     );
   }
